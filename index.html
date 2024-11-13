@@ -368,52 +368,87 @@
         <hr class="divider" />
         <br />
 
-        <!-- SECTION ---------------------------------------------------------------------- -->
-        <h1>Citation</h1>
-        <br />
-        <div class="row">
-          <div class="col-md-12">
-            <code>
-              @article{cite2023paper,<br />
-              &nbsp; author = {authors...},<br />
-              &nbsp; title = {full paper title...},<br />
-              &nbsp; journal = {journal name...},<br />
-              &nbsp; year = {2023},<br />
-              }</code
-            >
-          </div>
+        <!DOCTYPE html>
+        <-------------------citaion-------------------->
+<html>
+<head>
+    <title>Animated Citations</title>
+    <style>
+        .citation-container {
+            max-width: 800px;
+            margin: 20px auto;
+            font-family: Arial, sans-serif;
+        }
+
+        .citation {
+            padding: 20px;
+            margin: 15px 0;
+            background: #f8f9fa;
+            border-left: 4px solid #2196F3;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transform-origin: left;
+            animation: slideIn 0.5s ease-out;
+            transition: all 0.3s ease;
+        }
+
+        .citation:hover {
+            transform: translateX(10px);
+            background: #fff;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .citation-title {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .citation-authors {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 5px;
+        }
+
+        .citation-year {
+            color: #2196F3;
+            font-weight: bold;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="citation-container">
+        <div class="citation">
+            <div class="citation-title">The Future of Artificial Intelligence</div>
+            <div class="citation-authors">Smith, J., & Johnson, M.</div>
+            <div class="citation-year">2023</div>
         </div>
-      </div>
+
+        <div class="citation">
+            <div class="citation-title">Machine Learning Applications in Healthcare</div>
+            <div class="citation-authors">Brown, R., Davis, K., & Wilson, P.</div>
+            <div class="citation-year">2022</div>
+        </div>
+
+        <div class="citation">
+            <div class="citation-title">Neural Networks: A Comprehensive Guide</div>
+            <div class="citation-authors">Anderson, T., & Lee, S.</div>
+            <div class="citation-year">2023</div>
+        </div>
     </div>
-    <script src="files/scripts.js"></script>
-    <script src="files/jquery.min.js"></script>
-    <script src="files/bootstrap.bundle.min.js"></script>
-    <!-- Import the component -->
-
-    <main>
-      <canvas
-        id="defaultCanvas0"
-        class="p5Canvas"
-        width="4112"
-        height="2424"
-        style="width: 2056px; height: 1212px"
-      ></canvas>
-    </main>
-
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <script>
-      // Assume markdownContent contains your Markdown text
-      let markdownContent = document.getElementById("content").innerText;
-
-      // Use marked library to convert Markdown to HTML
-      let htmlContent = marked(markdownContent);
-
-      // Replace the content of the element with id "content" with HTML
-      document.getElementById("content").innerHTML = htmlContent;
-    </script>
-  </body>
+</body>
 </html>
-
 
 <!DOCTYPE HTML>
 
