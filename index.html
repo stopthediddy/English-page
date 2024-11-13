@@ -413,3 +413,40 @@
     </script>
   </body>
 </html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Animated PDF Viewer</title>
+    <style>
+        .pdf-container {
+            opacity: 0;
+            animation: fadeIn 1s ease-in forwards;
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            box-shadow: 0 0 20px rgba(0,0,0,0.2);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        object, embed {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="pdf-container">
+        <object data="your-pdf-file.pdf" type="application/pdf">
+            <embed src="your-pdf-file.pdf" type="application/pdf" />
+        </object>
+    </div>
+</body>
+</html>
